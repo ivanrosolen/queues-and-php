@@ -1,0 +1,18 @@
+{
+    "name": "Xuplau/queue-and-php",
+    "authors": [
+        {
+          "name": "Ivan Rosolen",
+          "email": "ivanrosolen@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "Xuplau\\":"src"
+        }
+    },
+    "require": {
+        "php" : ">=5.5",
+        "videlalvaro/php-amqplib": "2.6.*"
+    }
+}
