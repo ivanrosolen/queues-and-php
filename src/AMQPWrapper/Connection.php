@@ -25,12 +25,14 @@ class Connection
         $this->connection->close();
     }
 
-    public function publish(AMQPMessage $message, $exchange) {
+    public function publish(AMQPMessage $message, $exchange) 
+    {
         $this->channel->basic_publish($message, $exchange);
         $this->shutdown();
     }
 
-    public function consume($queue) {
+    public function consume($queue) 
+    {
         $this->channel->basic_consume($queue, 'tdc-demo', false, false, false, false, array($this, 'readMessage'));
         register_shutdown_function(array($this,'shutdown'));
 
@@ -39,7 +41,8 @@ class Connection
         }
     }
 
-    public function readMessage(AMQPMessage $message) {
+    public function readMessage(AMQPMessage $message) 
+    {
 
         echo "\n--------\n";
         echo $message->body;

@@ -6,7 +6,7 @@
 ## Usage
 
     php console/send.php "message"
-    php consule/consumer.php
+    php console/consumer.php
 
 ## Change log
 
